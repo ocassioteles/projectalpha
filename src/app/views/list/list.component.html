@@ -10,5 +10,13 @@
   </mat-card>
 <br>
 <ul>
-  <li *ngFor="let vehicle of vehicle"> {{ vehicle.name }} </li>
+  <li class="item" *ngFor="let vehicle of vehicles"> 
+    <span>Nome:  {{ vehicle.name }}</span>
+    <span>Ano: {{ vehicle.age }} </span>
+    <span>Combustível: {{ vehicle.fuel }} </span>
+    <span >Marca: {{ vehicle.brand }} </span>
+  </li>
+
 </ul>
+
+<button (click)="goToHome()">Voltar</button>
