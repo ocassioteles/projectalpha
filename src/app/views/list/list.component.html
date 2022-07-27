@@ -11,16 +11,15 @@
 <br>
 
 <ul>
-  <div [hidden]="vehicles.length == 0">
+
     <li class="item" *ngFor="let vehicle of vehicles"> 
     
-    <span>Nome:  {{ vehicle.name }}</span>
-    <span>Ano: {{ vehicle.age }} </span>
-    <span>Combustível: {{ vehicle.fuel }} </span>
-    <span >Marca: {{ vehicle.brand }} </span>
+    <span *ngIf="vehicles.length > 0">Nome:  {{ vehicle.name }}</span>
+    <span *ngIf="vehicles.length > 0">Ano: {{ vehicle.age }} </span>
+    <span *ngIf="vehicles.length > 0">Combustível: {{ vehicle.fuel }} </span>
+    <span *ngIf="vehicles.length > 0">Marca: {{ vehicle.brand }} </span>
     
   </li>
-  </div>
 </ul>
 
 
