@@ -14,10 +14,10 @@
 
     <li class="item" *ngFor="let vehicle of vehicles"> 
     
-    <span *ngIf="vehicles.length > 0">Nome:  {{ vehicle.name }}</span>
-    <span *ngIf="vehicles.length > 0">Ano: {{ vehicle.age }} </span>
-    <span *ngIf="vehicles.length > 0">Combustível: {{ vehicle.fuel }} </span>
-    <span *ngIf="vehicles.length > 0">Marca: {{ vehicle.brand }} </span>
+    <span *ngIf="vehicle.name != null">Nome:  {{ vehicle.name }}</span>
+    <span *ngIf="vehicle.age != null">Ano: {{ vehicle.age }} </span>
+    <span *ngIf="vehicle.fuel != null">Combustível: {{ vehicle.fuel }} </span>
+    <span *ngIf="vehicle.brand != null">Marca: {{ vehicle.brand }} </span>
     
   </li>
 </ul>
