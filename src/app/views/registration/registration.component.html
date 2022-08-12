@@ -1,5 +1,3 @@
-<p>Estamos trabalhando para formar a tela de registro!!!</p>
-
 <mat-card>
     <mat-card-title>Cadastro de Veículo</mat-card-title>
     <mat-card-subtitle>Preencha os dados abaixo</mat-card-subtitle>
@@ -16,11 +14,12 @@
             <mat-form-field>
                 <input matInput placeholder="Marca" formControlName="marca">
             </mat-form-field>
-            <input type="submit" class="btn btn-primary mt-4" value="Salvar">
+            <div button>
+                <input type="submit" class="btn btn-primary mt-4" value="Salvar">
+            <button (click)="goToHome()">Voltar</button>
+            </div>
         </form>
-        <button mat-raised-button color="primary">Salvar</button>
   </mat-card>
 
 
 
-<button (click)="goToHome()">Voltar</button>
