@@ -3,19 +3,20 @@
 <mat-card>
     <mat-card-title>Cadastro de Veículo</mat-card-title>
     <mat-card-subtitle>Preencha os dados abaixo</mat-card-subtitle>
-        <form>
+        <form [formGroup]="formCar" (ngSubmit)="onSubmit()">
             <mat-form-field>
-                <input matInput placeholder="Nome">
+                <input matInput placeholder="Nome" formControlName="nome">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Ano">
+                <input matInput placeholder="Ano" formControlName="ano">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Combustível">
+                <input matInput placeholder="Combustível" formControlName="combustivel">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Marca">
+                <input matInput placeholder="Marca" formControlName="marca">
             </mat-form-field>
+            <input type="submit" class="btn btn-primary mt-4" value="Salvar">
         </form>
         <button mat-raised-button color="primary">Salvar</button>
   </mat-card>
