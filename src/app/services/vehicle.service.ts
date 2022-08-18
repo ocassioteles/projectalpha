@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { Vehicle } from './vehicle.interface';
-import { Http, Headers, Response } from '@angular/http';
+// import { Http, Headers, Response } from '@angular/http';
 
 @Injectable({ providedIn: 'root' })
 export class VehicleService {
@@ -26,7 +26,7 @@ export class VehicleService {
   static vehicle: any;
   constructor(
     private vehicleService: VehicleService,
-    private http: Http
+    // private http: Http
     ) { }
 
   createForm(vehicle: Vehicle) {
@@ -34,43 +34,43 @@ export class VehicleService {
   }
 
 
-  public Salvar (data: Vehicle){
-    localStorage.setItem(data.name.toString(), JSON.stringify(data));
-  }
+//   public Salvar (data: Vehicle){
+//     localStorage.setItem(data.name.toString(), JSON.stringify(data));
+//   }
 
-  update(vehicle: Vehicle): Promise<Vehicle> {
-    const url = `${this.vehiclesUrl}/${vehicle.name}`; //app/cliente/:id
-    return this.http
-    .put(url, JSON.stringify(vehicle), {headers:this.headers})
-    .toPromise()
-    .then(() => vehicle as Vehicle);
-  }
+//   update(vehicle: Vehicle): Promise<Vehicle> {
+//     const url = `${this.vehiclesUrl}/${vehicle.name}`; //app/cliente/:id
+//     return this.http
+//     .put(url, JSON.stringify(vehicle), {headers:this.headers})
+//     .toPromise()
+//     .then(() => vehicle as Vehicle);
+//   }
 
-  getVehicles() : Promise<Vehicle[]> {
-    return this.http.get(this.vehiclesUrl) 
-      .toPromise()
-      .then(response => response.json().data as Vehicle[])
-      .catch(this.trataErro);
-   }
+//   getVehicles() : Promise<Vehicle[]> {
+//     return this.http.get(this.vehiclesUrl) 
+//       .toPromise()
+//       .then(response => response.json().data as Vehicle[])
+//       .catch(this.trataErro);
+//    }
 
-   private trataErro(err : any) : Promise<any> {
-    return Promise.reject(err.message || err );
-  }
+//    private trataErro(err : any) : Promise<any> {
+//     return Promise.reject(err.message || err );
+//   }
 
-  getCliente(name:string): Promise<Vehicle> {
-    return this.getVehicles()
-    .then((vehicles: Vehicle[]) => VehicleService.vehicle.find(vehicles => vehicles.name === name)); 
-   }
+//   getCliente(name:string): Promise<Vehicle> {
+//     return this.getVehicles()
+//     .then((vehicles: Vehicle[]) => VehicleService.vehicle.find(vehicles => vehicles.name === name)); 
+//    }
 
-   create(vehicle: Vehicle): Promise<Vehicle> {
-    return this.http.post(this.vehiclesUrl, JSON.stringify(vehicle), {headers:this.headers})
-    .toPromise()
-    .then((response : Response) => {
-        console.log(response.json().data);
-        return response.json().data as Vehicle;  
-    })
-    .catch(this.trataErro);
-}
+//    create(vehicle: Vehicle): Promise<Vehicle> {
+//     return this.http.post(this.vehiclesUrl, JSON.stringify(vehicle), {headers:this.headers})
+//     .toPromise()
+//     .then((response : Response) => {
+//         console.log(response.json().data);
+//         return response.json().data as Vehicle;  
+//     })
+//     .catch(this.trataErro);
+// }
 }
 
 

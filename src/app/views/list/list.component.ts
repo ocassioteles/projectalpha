@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Vehicle } from 'src/app/services/vehicle.interface';
-import { VehicleService } from 'src/app/services/vehicle.service';
+// import { VehicleService } from 'src/app/services/vehicle.service';
 
 @Component({
   selector: 'app-list',
@@ -21,7 +21,7 @@ export class ListComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private vehicleService: VehicleService
+    // private vehicleService: VehicleService
   ) { }
 
   ngOnInit()  { 
