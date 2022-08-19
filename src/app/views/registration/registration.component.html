@@ -1,6 +1,8 @@
-<mat-card>
+<body>
+    
+<mat-card class="item">
     <mat-card-title>Cadastro de Veículo</mat-card-title>
-    <mat-card-subtitle>Preencha os dados abaixo</mat-card-subtitle>
+    <mat-card-subtitle class="item">Preencha os dados abaixo</mat-card-subtitle>
         <form [formGroup]="formCar" (ngSubmit)="onSubmit()">
             <mat-form-field>
                 <input matInput placeholder="Nome" formControlName="name">
@@ -20,6 +22,8 @@
             </div>
         </form>
   </mat-card>
+
+</body>
 
 
 

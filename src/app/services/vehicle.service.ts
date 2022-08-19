@@ -17,11 +17,11 @@ export class VehicleService {
   teste123=0;
 
   vehicle: Array<Vehicle>=[
-    {  age: 1994 , name: 'Uno'  , fuel: 'gasolina' },
-    {  age: 2013 , name: 'Sonic'  , fuel: 'flex' , brand: 'Chevrolet'},
-    {  age: 2010 , name: 'Gol'  , fuel: 'flex' },
-    {  age: 1992 , name: 'Kadett'  , fuel: 'alcool' , brand: 'Chevrolet'},
-    {  age: 2020 , name: 'Civic'  , fuel: 'flex' }
+    {  age: 1994 , name: 'Uno'  , fuel: 'Gasolina' },
+    {  age: 2013 , name: 'Sonic'  , fuel: 'Flex' , brand: 'Chevrolet'},
+    {  age: 2010 , name: 'Gol'  , fuel: 'Flex' },
+    {  age: 1998 , name: 'Kadett'  , fuel: 'Álcool' , brand: 'Chevrolet'},
+    {  age: 2020 , name: 'Civic'  , fuel: 'Flex' }
   ]
 
   
