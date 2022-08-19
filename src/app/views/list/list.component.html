@@ -14,8 +14,8 @@
     
     <span *ngIf="vehicle.name != null">Nome:  {{ vehicle.name }}</span>
     <span *ngIf="vehicle.age != null">Ano: {{ vehicle.age }} </span>
-    <span *ngIf="vehicle.fuel != null">Combustível: {{ vehicle.fuel }} </span>
-    <span *ngIf="vehicle.brand != null && vehicle.brand != '' ">Marca: {{ vehicle.brand }} </span>
+    <span *ngIf="vehicle.fuel">Combustível: {{ vehicle.fuel }} </span> <!-- Da mesma forma que "evocando" só os valores... -->
+    <span *ngIf="vehicle.brand != null && vehicle.brand != '' ">Marca: {{ vehicle.brand }} </span> <!-- ... como referindo como null ou abrindo aspas e dando esse vazio, o campo só exibe se preenchido -->
     
   </li>
 </ul>
