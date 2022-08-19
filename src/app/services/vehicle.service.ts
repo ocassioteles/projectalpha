@@ -23,15 +23,21 @@ export class VehicleService {
     {  age: 1992 , name: 'Kadett'  , fuel: 'alcool' , brand: 'Chevrolet'},
     {  age: 2020 , name: 'Civic'  , fuel: 'flex' }
   ]
+
+  
   static vehicle: any;
   constructor(
-    private vehicleService: VehicleService,
+   
     // private http: Http
     ) { }
 
   createForm(vehicle: Vehicle) {
 
   }
+
+
+
+
 
 
 //   public Salvar (data: Vehicle){

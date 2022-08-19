@@ -3,16 +3,16 @@
     <mat-card-subtitle>Preencha os dados abaixo</mat-card-subtitle>
         <form [formGroup]="formCar" (ngSubmit)="onSubmit()">
             <mat-form-field>
-                <input matInput placeholder="Nome" formControlName="nome">
+                <input matInput placeholder="Nome" formControlName="name">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Ano" formControlName="ano">
+                <input type="number" matInput placeholder="Ano" formControlName="age">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Combustível" formControlName="combustivel">
+                <input matInput placeholder="Combustível" formControlName="fuel">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Marca" formControlName="marca">
+                <input matInput placeholder="Marca" formControlName="brand">
             </mat-form-field>
             <div button>
                 <input type="submit" class="btn btn-primary mt-4" value="Salvar">

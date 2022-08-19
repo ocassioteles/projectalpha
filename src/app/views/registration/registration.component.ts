@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Car } from 'src/app/data-form/data-form.module';
 import { Vehicle } from 'src/app/services/vehicle.interface';
+import { VehicleService } from 'src/app/services/vehicle.service';
 
 @Component({
   selector: 'app-registration',
@@ -14,29 +14,46 @@ export class RegistrationComponent implements OnInit {
   formCar!: FormGroup;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private service: VehicleService
   ) { }
 
-  ngOnInit()  { 
-    this.createForm(new Car ());
-   }
+  ngOnInit() {
+    this.createForm();
 
-   goToHome() {
+    console.log(this.service.vehicle);
+
+
+  }
+
+  goToHome() {
     this.router.navigate(['/']);
-   }
+  }
 
-   createForm(car: Car) {
+  createForm() {
     this.formCar = new FormGroup({
-    nome: new FormControl(car.nome),
-    ano: new FormControl(car.ano),
-    combustivel: new FormControl(car.combustivel),
-    marca: new FormControl(car.marca)
+      name: new FormControl(""),
+      age: new FormControl(),
+      fuel: new FormControl(""),
+      brand: new FormControl("")
     })
 
-}
+  }
 
-    onSubmit(){
-      console.log(this.formCar.value)
+  onSubmit() {
+
+
+    const vehicleObject: Vehicle = {
+      age: this.formCar.controls['age'].value,
+      fuel: this.formCar.controls['fuel'].value,
+      name: this.formCar.controls['name'].value,
+      brand: this.formCar.controls['brand'].value
     }
+
+
+    this.service.vehicle.push(vehicleObject)
+
+
+  }
 
 }
