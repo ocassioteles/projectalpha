@@ -3,17 +3,21 @@
 <br>
 
 <mat-card-title>Lista de Veículos</mat-card-title>
-<ul>
+    <ul>
   
-    <mat-card class="item" *ngFor="let vehicle of service.vehicle"> 
-    
-    <span *ngIf="vehicle.name != null">Nome:  {{ vehicle.name }}</span>
-    <span *ngIf="vehicle.age != null">Ano: {{ vehicle.age }} </span>
-    <span *ngIf="vehicle.fuel">Combustível: {{ vehicle.fuel }} </span> <!-- Da mesma forma que "evocando" só os valores... -->
-    <span *ngIf="vehicle.brand != null && vehicle.brand != '' ">Marca: {{ vehicle.brand }} </span> <!-- ... como referindo como null ou abrindo aspas e dando esse vazio, o campo só exibe se preenchido -->
-    
-    </mat-card>
-</ul>
+        <mat-card class="item" *ngFor="let vehicle of service.vehicle"> 
+        
+            <span *ngIf="vehicle.name != null">Nome:  {{ vehicle.name }}</span>
+            <span *ngIf="vehicle.age != null">Ano: {{ vehicle.age }} </span>
+            <span *ngIf="vehicle.fuel">Combustível: {{ vehicle.fuel }} </span> 
+            <!-- Da mesma forma que "evocando" só os valores... -->
+
+            <span *ngIf="vehicle.brand != null && vehicle.brand != '' ">Marca: {{ vehicle.brand }} </span> 
+            <!-- ... como referindo como null ou abrindo aspas e dando esse vazio, o campo só exibe se preenchido -->
+        
+        </mat-card>
+
+    </ul>
 
 
 

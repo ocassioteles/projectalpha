@@ -1,0 +1,37 @@
+.mat-card {
+    margin: 7px;
+    padding: 20px;
+    max-width: 1450px;
+    cursor: pointer;
+}
+
+.mat-card:after,
+.mat-card:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform .3s ease-in-out;
+}
+
+.mat-card:before {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    transform: scaleY(0);
+}
+
+.mat-card:after {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: scaleX(0);
+}
+
+.mat-card:hover:before {
+    transform: scaleY(1);
+}
+
+.mat-card:hover:after {
+    transform: scaleX(1);
+}
